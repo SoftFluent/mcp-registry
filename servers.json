@@ -1,0 +1,120 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-04-05T10:00:00Z",
+  "organization": "YourOrganization",
+  "contact": "security@yourorg.com",
+  "approval_process_url": "https://github.com/your-org/mcp-registry/blob/main/README.md",
+  "security_policy_url": "https://github.com/your-org/mcp-registry/blob/main/SECURITY.md",
+  
+  "servers": [
+    {
+      "id": "microsoft-azure-devops-mcp",
+      "name": "Microsoft Azure DevOps MCP",
+      "publisher": "microsoft",
+      "package": "microsoft/azure-devops-mcp",
+      "version": "latest",
+      "description": "Azure DevOps integration for work items, repositories, pipelines, and pull requests",
+      
+      "approval": {
+        "approved_by": "Security Team",
+        "approved_date": "2026-04-05",
+        "review_date": "2026-07-05",
+        "ticket": "SEC-001"
+      },
+      
+      "security": {
+        "risk_level": "low",
+        "data_access": ["organization_data", "code_repos", "work_items"],
+        "authentication": "Azure AD / Entra ID",
+        "encryption": "TLS 1.3",
+        "audit_logging": true,
+        "data_residency": "Same as Azure DevOps organization"
+      },
+      
+      "scopes": [
+        "work_items:read",
+        "work_items:write",
+        "repos:read",
+        "pipelines:read",
+        "pull_requests:read",
+        "pull_requests:write",
+        "wiki:read",
+        "wiki:write"
+      ],
+      
+      "metadata": {
+        "teams": ["Development", "QA", "DevOps", "Product"],
+        "use_cases": [
+          "User story creation and management",
+          "Test case generation",
+          "Pull request automation",
+          "Pipeline monitoring"
+        ],
+        "documentation_url": "https://marketplace.visualstudio.com/items?itemName=microsoft.azure-devops-mcp",
+        "support_contact": "devops-team@yourorg.com"
+      }
+    },
+    {
+      "id": "pylance-mcp-server",
+      "name": "Pylance MCP Server",
+      "publisher": "microsoft",
+      "package": "pylance-mcp-server",
+      "version": "latest",
+      "description": "Python language support, type checking, and code analysis",
+      
+      "approval": {
+        "approved_by": "Development Team Lead",
+        "approved_date": "2026-04-05",
+        "review_date": "2026-07-05",
+        "ticket": "SEC-002"
+      },
+      
+      "security": {
+        "risk_level": "low",
+        "data_access": ["code_only", "workspace_files"],
+        "authentication": "none",
+        "encryption": "local_only",
+        "audit_logging": false,
+        "data_residency": "local_workspace"
+      },
+      
+      "scopes": [
+        "python_analysis",
+        "type_checking",
+        "imports",
+        "syntax_errors"
+      ],
+      
+      "metadata": {
+        "teams": ["Python Development"],
+        "use_cases": [
+          "Python code analysis",
+          "Type checking",
+          "Import management",
+          "Syntax validation"
+        ],
+        "documentation_url": "https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance",
+        "support_contact": "python-team@yourorg.com"
+      }
+    }
+  ],
+  
+  "blocked_servers": [
+    {
+      "package": "example/untrusted-mcp",
+      "reason": "Failed security review - unverified publisher",
+      "blocked_date": "2026-03-15",
+      "blocked_by": "Security Team"
+    }
+  ],
+  
+  "pending_review": [
+    {
+      "package": "example/pending-mcp",
+      "requested_by": "developer@yourorg.com",
+      "requested_date": "2026-04-01",
+      "review_status": "in_progress",
+      "ticket": "SEC-003"
+    }
+  ]
+}
