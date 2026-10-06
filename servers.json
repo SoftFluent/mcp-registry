@@ -55,48 +55,56 @@
       }
     },
     {
-      "id": "pylance-mcp-server",
-      "name": "Pylance MCP Server",
-      "publisher": "microsoft",
-      "package": "pylance-mcp-server",
-      "version": "latest",
-      "description": "Python language support, type checking, and code analysis",
-      
-      "approval": {
-        "approved_by": "Development Team Lead",
-        "approved_date": "2026-04-05",
-        "review_date": "2026-07-05",
-        "ticket": "SEC-002"
-      },
-      
-      "security": {
-        "risk_level": "low",
-        "data_access": ["code_only", "workspace_files"],
-        "authentication": "none",
-        "encryption": "local_only",
-        "audit_logging": false,
-        "data_residency": "local_workspace"
-      },
-      
-      "scopes": [
-        "python_analysis",
-        "type_checking",
-        "imports",
-        "syntax_errors"
-      ],
-      
-      "metadata": {
-        "teams": ["Python Development"],
-        "use_cases": [
-          "Python code analysis",
-          "Type checking",
-          "Import management",
-          "Syntax validation"
+        "id": "pylance-mcp-server",
+        "name": "Pylance MCP Server",
+        "publisher": "microsoft",
+        "package": "pylance-mcp-server",
+        "version": "latest",
+        "description": "Python language support, type checking, and code analysis",
+
+        "approval": {
+            "approved_by": "Development Team Lead",
+            "approved_date": "2026-04-05",
+            "review_date": "2026-07-05",
+            "ticket": "SEC-002"
+        },
+
+        "security": {
+            "risk_level": "low",
+            "data_access": [ "code_only", "workspace_files" ],
+            "authentication": "none",
+            "encryption": "local_only",
+            "audit_logging": false,
+            "data_residency": "local_workspace"
+        },
+
+        "scopes": [
+            "python_analysis",
+            "type_checking",
+            "imports",
+            "syntax_errors"
         ],
-        "documentation_url": "https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance",
-        "support_contact": "python-team@yourorg.com"
-      }
-    }
+
+        "metadata": {
+            "teams": [ "Python Development" ],
+            "use_cases": [
+                "Python code analysis",
+                "Type checking",
+                "Import management",
+                "Syntax validation"
+            ],
+            "documentation_url": "https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance",
+            "support_contact": "python-team@yourorg.com"
+        }
+    },
+    {
+        "id": "qdrant-rag",
+        "name": "qdrant-rag",
+        "publisher": "Softfluent",
+        "package": "qdrant-rag",
+        "version": "latest",
+        "description": "Qdrant DB RAG"
+        }
   ],
   
   "blocked_servers": [
